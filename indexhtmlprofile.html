@@ -237,6 +237,12 @@
             outline-offset: 2px;
         }
 
+        .button-favorite {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+    }
+
         .hero-photo {
             background: var(--blue);
             padding: 28px;
@@ -356,6 +362,94 @@
         tbody tr:hover {
             background: #F7EDE4;
         }
+
+        .favorites {
+            padding: 60px 0;
+        }
+
+        .section-title {
+             margin-bottom: 30px;
+        }
+
+        .section-title span {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            margin: 8px 0;
+            font-size: 32px;
+        }
+
+        .section-title p {
+            margin: 0;
+            opacity: 0.7;
+        }
+
+        .favorite-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+             gap: 25px;
+        }
+
+        .favorite-card {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            border-radius: 20px;
+            background: #F4E5D4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .favorite-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .favorite-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F7F3E8;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .favorite-category {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #9B1B45;
+        }
+
+        .favorite-info h3 {
+            margin: 5px 0;
+        }
+
+        .favorite-info p {
+            margin: 0 0 15px;
+            opacity: 0.7;
+        }
+
+        .favorite-link {
+            color: #9B1B45;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .favorite-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+            .favorite-grid {
+                grid-template-columns: 1fr;
+            }
+  }
 
         .contact-card {
             background: var(--berry);
@@ -507,6 +601,9 @@
                         <a href="#kuliah" aria-label="Mata kuliah" title="Mata kuliah">▤</a>
                     </li>
                     <li>
+                        <a href="#favorit" aria-label="favorit" title="favorit">♫</a>
+                    </li>
+                    <li>
                         <a href="#kontak" aria-label="Kontak" title="Kontak">✉</a>
                     </li>
                 </ul>
@@ -526,15 +623,15 @@
                     <h1 id="judul-utama">Farah <span>Annafia</span></h1>
 
                     <p class="hero-description">
-                        Saya seorang ENFJ yang suka belajar hal baru dan mencoba berbagai hal. 
-                        Saya cukup tertarik dengan dunia teknologi, khususnya pengembangan website. 
-                        Selain kuliah dan mengerjakan tugas, saya senang menghabiskan waktu dengan bermain, 
-                        mendengarkan musik, menonton film, atau sekadar menikmati waktu sendiri.
+                        Mahasiswa Teknik Informatika yang memiliki rasa ingin tahu terhadap teknologi 
+                        dan senang mengubah ide menjadi sesuatu yang nyata. Saya menikmati proses belajar,
+                        mencoba hal baru, dan terus mengembangkan kemampuan melalui berbagai pengalaman dan project.
                     </p>
 
                     <div class="hero-actions">
                         <a class="button button-primary" href="#profil">Lihat Profil</a>
                         <a class="button button-secondary" href="#kuliah">Mata Kuliah</a>
+                        <a class="button button-favorite" href="#favorit">Favorit</a>
                     </div>
                 </div>
 
@@ -558,10 +655,12 @@
                     <article class="card">
                         <h3>Tentang Saya</h3>
                         <p class="bio-text">
-                            Halo! Saya <strong>Farah Annafia</strong>, seorang mahasiswa
-                            yang sedang menempuh pendidikan di prodi teknik informatika.
-                            Saya senang mempelajari pemrograman, membuat tampilan website,
-                            dan mencoba berbagai teknologi baru.
+                            Haloo! aku <strong>Farah Annafia</strong>, Seorang mahasiswa yang sedang menempuh pendidikan di prodi Teknik Informatika. 
+                            Aku suka mencoba hal-hal baru, mulai dari mengunjungi tempat baru, mendengarkan lagu, 
+                            menonton film atau bahkan mempelajari sejarah dunia yang belum kuketahui sebelumnya.
+                            
+                            Aku percaya bahwa kemampuan berkembang dari kebiasaan untuk terus mencoba. 
+                            Karena itu, Aku selalu berusaha menikmati proses belajar dan mengambil pengalaman dari setiap hal yang saya kerjakan.
                         </p>
                     </article>
 
@@ -673,6 +772,50 @@
                         </tbody>
                     </table>
                 </div>
+            </section>
+
+            <section id="favorit" class="favorites">
+                <div class="section-title">
+                     <span>MY FAVORITES</span>
+                     <h2>Lagu & Film Favorit</h2>
+                      <p>Beberapa lagu dan film yang sedang saya sukai.</p>
+                </div>
+
+                 <div class="favorite-grid">
+                     <article class="favorite-card">
+                        <div class="favorite-icon">🎵</div>
+
+                         <div class="favorite-info">
+                            <span class="favorite-category">MUSIC</span>
+                             <h3>Till Forever Falls Apart</h3>
+                              <p>Ashe,FINNEAS</p>
+
+                               <a href="https://open.spotify.com/track/2769RhOZs0ezRncRW1vryp?si=357e470f94a54e87"
+                                target="_blank"
+                                 rel="noopener noreferrer"
+                                 class="favorite-link">
+                                  Dengarkan di Spotify →
+                                </a>
+                         </div>
+                     </article>
+
+                      <article class="favorite-card">
+                         <div class="favorite-icon">🎬</div>
+
+                          <div class="favorite-info">
+                            <span class="favorite-category">MOVIE</span>
+                             <h3>Spirited Away</h3>
+                              <p>Hayao Miyazaki</p>
+
+                               <a href="https://share.google/T4a5bQvUypU4L2O1C"
+                                target="_blank"
+                                 rel="noopener noreferrer"
+                                 class="favorite-link">
+                                  Lihat di IMDb →
+                                </a>
+                          </div>
+                      </article>
+                 </div>
             </section>
 
             <section id="kontak" aria-labelledby="judul-kontak">
