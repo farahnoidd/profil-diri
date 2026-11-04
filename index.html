@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Profil Diri | Portfolio Mahasiswa</title>
-    <meta name="description" content="Halaman profil diri dan portfolio mahasiswa yang berisi biodata, pendidikan, mata kuliah semester ini, dan kontak.">
+    <meta name="description" content="Halaman profil diri dan portfolio mahasiswa yang berisi biodata, pendidikan, mata kuliah semester ini, proyek, dan kontak.">
     <meta property="og:title" content="Profil Diri | Portfolio Mahasiswa">
     <meta property="og:description" content="Kenali profil, pendidikan, dan aktivitas akademik saya melalui halaman portfolio sederhana ini.">
     <meta property="og:image" content="https://domain-anda.com/foto-diri.jpg">
@@ -13,11 +13,11 @@
 
     <style>
         :root {
-            --cream: #F7F3E8;      
-            --green: #214327;      
-            --berry: #9B1B45;      
-            --soft: #F4E5D4;        
-            --blue: #6FA8C8;        
+            --cream: #F7F3E8;
+            --green: #214327;
+            --berry: #9B1B45;
+            --soft: #F4E5D4;
+            --blue: #6FA8C8;
             --dark: #3C3540;
             --white: #FFFFFF;
             --shadow: 0 14px 35px rgba(60, 53, 64, 0.12);
@@ -241,7 +241,7 @@
             background: var(--green);
             color: var(--white);
             border-color: var(--green);
-    }
+        }
 
         .hero-photo {
             background: var(--blue);
@@ -363,12 +363,46 @@
             background: #F7EDE4;
         }
 
+        /* ===== Proyek ===== */
+        .proyek-card p {
+            color: #686166;
+            margin-bottom: 12px;
+        }
+
+        .proyek-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .proyek-card details {
+            border-top: 1px dashed #D8D0CA;
+            padding-top: 14px;
+        }
+
+        .proyek-card summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--berry);
+        }
+
+        .proyek-card iframe {
+            width: 100%;
+            height: 650px;
+            border: 1px solid #D8D0CA;
+            border-radius: 12px;
+            margin-top: 14px;
+            background: var(--white);
+        }
+
+        /* ===== Favorit ===== */
         .favorites {
             padding: 60px 0;
         }
 
         .section-title {
-             margin-bottom: 30px;
+            margin-bottom: 30px;
         }
 
         .section-title span {
@@ -390,7 +424,7 @@
         .favorite-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-             gap: 25px;
+            gap: 25px;
         }
 
         .favorite-card {
@@ -449,7 +483,7 @@
             .favorite-grid {
                 grid-template-columns: 1fr;
             }
-  }
+        }
 
         .contact-card {
             background: var(--berry);
@@ -566,6 +600,10 @@
                 grid-template-columns: 1fr;
                 gap: 2px;
             }
+
+            .proyek-card iframe {
+                height: 480px;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -601,7 +639,10 @@
                         <a href="#kuliah" aria-label="Mata kuliah" title="Mata kuliah">▤</a>
                     </li>
                     <li>
-                        <a href="#favorit" aria-label="favorit" title="favorit">♫</a>
+                        <a href="#proyek" aria-label="Proyek" title="Proyek">▣</a>
+                    </li>
+                    <li>
+                        <a href="#favorit" aria-label="Favorit" title="Favorit">♫</a>
                     </li>
                     <li>
                         <a href="#kontak" aria-label="Kontak" title="Kontak">✉</a>
@@ -623,7 +664,7 @@
                     <h1 id="judul-utama">Farah <span>Annafia</span></h1>
 
                     <p class="hero-description">
-                        Mahasiswa Teknik Informatika yang memiliki rasa ingin tahu terhadap teknologi 
+                        Mahasiswa Teknik Informatika yang memiliki rasa ingin tahu terhadap teknologi
                         dan senang mengubah ide menjadi sesuatu yang nyata. Saya menikmati proses belajar,
                         mencoba hal baru, dan terus mengembangkan kemampuan melalui berbagai pengalaman dan project.
                     </p>
@@ -631,7 +672,7 @@
                     <div class="hero-actions">
                         <a class="button button-primary" href="#profil">Lihat Profil</a>
                         <a class="button button-secondary" href="#kuliah">Mata Kuliah</a>
-                        <a class="button button-favorite" href="#favorit">Favorit</a>
+                        <a class="button button-favorite" href="#proyek">Proyek</a>
                     </div>
                 </div>
 
@@ -655,11 +696,11 @@
                     <article class="card">
                         <h3>Tentang Saya</h3>
                         <p class="bio-text">
-                            Haloo! aku <strong>Farah Annafia</strong>, Seorang mahasiswa yang sedang menempuh pendidikan di prodi Teknik Informatika. 
-                            Aku suka mencoba hal-hal baru, mulai dari mengunjungi tempat baru, mendengarkan lagu, 
+                            Haloo! aku <strong>Farah Annafia</strong>, Seorang mahasiswa yang sedang menempuh pendidikan di prodi Teknik Informatika.
+                            Aku suka mencoba hal-hal baru, mulai dari mengunjungi tempat baru, mendengarkan lagu,
                             menonton film atau bahkan mempelajari sejarah dunia yang belum kuketahui sebelumnya.
-                            
-                            Aku percaya bahwa kemampuan berkembang dari kebiasaan untuk terus mencoba. 
+
+                            Aku percaya bahwa kemampuan berkembang dari kebiasaan untuk terus mencoba.
                             Karena itu, Aku selalu berusaha menikmati proses belajar dan mengambil pengalaman dari setiap hal yang saya kerjakan.
                         </p>
                     </article>
@@ -729,7 +770,7 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>ICT dan Islam </td>
+                                <td>ICT dan Islam</td>
                                 <td>12:40:00-14:20:00</td>
                                 <td>2</td>
                                 <td>Selasa</td>
@@ -774,75 +815,69 @@
                 </div>
             </section>
 
-            <section id="favorit" class="favorites">
-                <div class="section-title">
-                     <span>MY FAVORITES</span>
-                     <h2>Lagu & Film Favorit</h2>
-                      <p>Beberapa lagu dan film yang sedang saya sukai.</p>
+            <section id="proyek" aria-labelledby="judul-proyek">
+                <div class="section-heading">
+                    <div>
+                        <h2 id="judul-proyek">Proyek Tugas</h2>
+                        <p class="section-subtitle">Pertemuan 6: Git, npm, TypeScript, dan Vite</p>
+                    </div>
                 </div>
 
-                 <div class="favorite-grid">
-                     <article class="favorite-card">
-                        <div class="favorite-icon">🎵</div>
+                <article class="card proyek-card">
+                    <h3>Daftar Tugas Kuliah</h3>
+                    <p>
+                        Aplikasi web untuk menambah, mengedit, menghapus, dan menandai status tugas kuliah.
+                        Dibuat dengan Vite + TypeScript, lengkap dengan penjelasan Git, npm, TypeScript,
+                        Vite, dan environment variables di halamannya.
+                    </p>
 
-                         <div class="favorite-info">
-                            <span class="favorite-category">MUSIC</span>
-                             <h3>Till Forever Falls Apart</h3>
-                              <p>Ashe,FINNEAS</p>
-
-                               <a href="https://open.spotify.com/track/2769RhOZs0ezRncRW1vryp?si=357e470f94a54e87"
-                                target="_blank"
-                                 rel="noopener noreferrer"
-                                 class="favorite-link">
-                                  Dengarkan di Spotify →
-                                </a>
-                         </div>
-                     </article>
-
-                      <article class="favorite-card">
-                         <div class="favorite-icon">🎬</div>
-
-                          <div class="favorite-info">
-                            <span class="favorite-category">MOVIE</span>
-                             <h3>Spirited Away</h3>
-                              <p>Hayao Miyazaki</p>
-
-                               <a href="https://share.google/T4a5bQvUypU4L2O1C"
-                                target="_blank"
-                                 rel="noopener noreferrer"
-                                 class="favorite-link">
-                                  Lihat di IMDb →
-                                </a>
-                          </div>
-                      </article>
-                 </div>
-            </section>
-
-            <section id="kontak" aria-labelledby="judul-kontak">
-                <div class="contact-card">
-                    <div>
-                        <h2 id="judul-kontak">let's get connected</h2>
-                        <p>
-                            Silakan hubungi saya melalui email untuk berdiskusi,
-                            berkolaborasi, atau sekadar berkenalan.
-                        </p>
-
-                        <a class="email-link" href="mailto:farahcetamoll@gmail.com">
-                            farahcetamoll@gmail.com
-                        </a>
+                    <div class="proyek-links">
+                        <a class="button button-primary" href="https://tugas.farahnoidd.my.id" target="_blank" rel="noopener noreferrer">Buka Aplikasi ↗</a>
+                        <a class="button button-secondary" href="https://github.com/farahnoidd/daftar-tugas" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
                     </div>
 
-                    <a class="button" href="https://github.com/farahnoidd" target="_blank" rel="noopener noreferrer">
-                        GitHub ↗
-                    </a>
-                </div>
+                    <details>
+                        <summary>Lihat pratinjau langsung</summary>
+                        <iframe
+                            src="https://tugas.farahnoidd.my.id"
+                            title="Pratinjau aplikasi Daftar Tugas Kuliah"
+                            loading="lazy">
+                        </iframe>
+                    </details>
+                </article>
             </section>
 
-            <footer>
-                <p>&copy; 2026 Farah Annafia. All rights reserved.</p>
-                <p>Built with semantic HTML5</p>
-            </footer>
-        </main>
-    </div>
-</body>
-</html>
+            <section id="favorit" class="favorites">
+                <div class="section-title">
+                    <span>MY FAVORITES</span>
+                    <h2>Lagu &amp; Film Favorit</h2>
+                    <p>Beberapa lagu dan film yang sedang saya sukai.</p>
+                </div>
+
+                <div class="favorite-grid">
+                    <article class="favorite-card">
+                        <div class="favorite-icon">🎵</div>
+
+                        <div class="favorite-info">
+                            <span class="favorite-category">MUSIC</span>
+                            <h3>Till Forever Falls Apart</h3>
+                            <p>Ashe, FINNEAS</p>
+
+                            <a href="https://open.spotify.com/track/2769RhOZs0ezRncRW1vryp?si=357e470f94a54e87"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="favorite-link">
+                                Dengarkan di Spotify →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="favorite-card">
+                        <div class="favorite-icon">🎬</div>
+
+                        <div class="favorite-info">
+                            <span class="favorite-category">MOVIE</span>
+                            <h3>Spirited Away</h3>
+                            <p>Hayao Miyazaki</p>
+
+                            <a
